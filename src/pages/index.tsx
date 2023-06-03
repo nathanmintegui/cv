@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       <Container>
         {<Header />}
 
-        <section>
+        <section className="flex justify-between">
           {<Education />} {<Experience />}
         </section>
 

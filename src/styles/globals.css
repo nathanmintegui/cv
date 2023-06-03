@@ -15,3 +15,9 @@ body {
   background: #f4f7ff;
   height: 100vh;
 }
+
+.section-shadow {
+  background: #f4f7ff;
+  box-shadow: 14px 24px 16px rgba(28, 38, 71, 0.05), inset 3px 4px 4px #ffffff;
+  border-radius: 25px;
+}
