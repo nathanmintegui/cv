@@ -6,4 +6,9 @@ export default {
     extend: {},
   },
   plugins: [],
+  colors: {
+    gray: {
+      100: "#F4F7FF",
+    },
+  },
 } satisfies Config;
