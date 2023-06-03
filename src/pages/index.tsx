@@ -6,7 +6,13 @@ import { rubik700, spaceMono400 } from "~/styles/fonts";
 
 import gitHubIcon from "../assets/github-icon.png";
 
-import { Contact, Education, Experience, Skills } from "~/components";
+import {
+  Contact,
+  Container,
+  Education,
+  Experience,
+  Skills,
+} from "~/components";
 
 const Home: NextPage = () => {
   const handleClick = () => {
@@ -48,17 +54,19 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex flex-col items-center" id="__next">
-      {<Header />}
+      <Container>
+        {<Header />}
 
-      <section>
-        {<Education />} {<Experience />}
-      </section>
+        <section>
+          {<Education />} {<Experience />}
+        </section>
 
-      <section>{<Skills />}</section>
+        <section>{<Skills />}</section>
 
-      <section>{<Contact />}</section>
+        <section>{<Contact />}</section>
 
-      {<Footer />}
+        {<Footer />}
+      </Container>
     </div>
   );
 };
