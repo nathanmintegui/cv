@@ -10,3 +10,11 @@ export const educationData = [
     description: "Lorem ipsum dolor",
   },
 ];
+
+export const experienceData = [
+  {
+    date: "2018 - Present",
+    name: "Lorem ipsum",
+    description: "Lorem ipsum dolor",
+  },
+];
