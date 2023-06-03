@@ -9,12 +9,21 @@ import gitHubIcon from "../assets/github-icon.png";
 import { Contact, Education, Experience, Skills } from "~/components";
 
 const Home: NextPage = () => {
+  const handleClick = () => {
+    window.location.href = "https://github.com/nathanmintegui";
+  };
+
   const Header = () => {
     return (
       <div className="mb-24 mt-24 flex flex-col items-center">
         <div className={`${rubik700.className} text-6xl`}>NATHAN BERGER</div>
         <div className="mb-5 mt-5 flex justify-center">
-          <Image src={gitHubIcon} alt="GitHub logo" className="mr-10" />
+          <Image
+            src={gitHubIcon}
+            alt="GitHub logo"
+            className="mr-10"
+            onClick={handleClick}
+          />
           <div>in</div>
         </div>
         <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
