@@ -2,20 +2,44 @@ import { type NextPage } from "next";
 
 import Image from "next/image";
 
+import { rubik700, spaceMono400 } from "~/styles/fonts";
+
 import gitHubIcon from "../assets/github-icon.png";
 
 import { Contact, Education, Experience, Skills } from "~/components";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <header>
-        <div>NATHAN MINTEGUI BERGER</div>
-        <div className="flex">
-          <Image src={gitHubIcon} alt="" />
+  const Header = () => {
+    return (
+      <div className="mb-24 mt-24 flex flex-col items-center">
+        <div className={`${rubik700.className} text-6xl`}>NATHAN BERGER</div>
+        <div className="mb-5 mt-5 flex justify-center">
+          <Image src={gitHubIcon} alt="GitHub logo" className="mr-10" />
           <div>in</div>
         </div>
-      </header>
+        <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor amet.
+        </p>
+      </div>
+    );
+  };
+
+  const Footer = () => {
+    return (
+      <div>
+        <p>2024 - Lorem ipsum</p>
+        <div>
+          <Image src="" alt="" />
+          <p>in</p>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className="flex flex-col items-center" id="__next">
+      {<Header />}
 
       <section>
         {<Education />} {<Experience />}
@@ -25,13 +49,7 @@ const Home: NextPage = () => {
 
       <section>{<Contact />}</section>
 
-      <footer>
-        <p>2023 - Lorem ipsum</p>
-        <div>
-          <Image src="" alt="" />
-          <p>in</p>
-        </div>
-      </footer>
+      {<Footer />}
     </div>
   );
 };
