@@ -61,7 +61,7 @@ const Home: NextPage = () => {
           {<Education />} {<Experience />}
         </section>
 
-        <section>{<Skills />}</section>
+        <section className="mt-24">{<Skills />}</section>
 
         <section>{<Contact />}</section>
 
