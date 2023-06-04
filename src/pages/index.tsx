@@ -63,7 +63,7 @@ const Home: NextPage = () => {
 
         <section className="mt-24">{<Skills />}</section>
 
-        <section>{<Contact />}</section>
+        <section className="mt-24 flex justify-center">{<Contact />}</section>
 
         {<Footer />}
       </Container>
