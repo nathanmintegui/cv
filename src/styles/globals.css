@@ -21,3 +21,7 @@ body {
   box-shadow: 14px 24px 16px rgba(28, 38, 71, 0.05), inset 3px 4px 4px #ffffff;
   border-radius: 25px;
 }
+
+*:focus {
+  outline: none;
+}
