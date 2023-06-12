@@ -12,7 +12,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="flex w-5/12 flex-col items-center">
       <h1
-        className={`${rubik800.className} section-shadow w-2/12 text-center text-4xl`}
+        className={`${rubik800.className} section-shadow flex h-28 w-80 items-center justify-center rounded-3xl text-4xl`}
       >
         Contact
       </h1>
@@ -39,7 +39,7 @@ export const Contact: React.FC = () => {
           />
         </label>
         <button
-          className={`${spaceMono400.className} mt-5 w-16 rounded-sm bg-black text-white`}
+          className={`${spaceMono400.className} mt-5 flex h-9 w-20 items-center justify-center rounded-sm bg-black text-white`}
         >
           Send
         </button>
