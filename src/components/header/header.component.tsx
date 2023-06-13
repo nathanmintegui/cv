@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { GitHub, IonLogo } from "~/assets";
 
-import { rubik700, spaceMono400 } from "~/styles/fonts";
+import { rubik700, rubik800, spaceMono400 } from "~/styles/fonts";
 
 export const Header = () => {
   const handleGitHubClick = () => {
@@ -25,10 +25,15 @@ export const Header = () => {
           <Image
             src={GitHub}
             alt="GitHub logo"
-            className="mr-10"
+            className="mr-10 cursor-pointer"
             onClick={handleGitHubClick}
           />
-          <div onClick={handleLinkedinClick}>in</div>
+          <div
+            onClick={handleLinkedinClick}
+            className={`${rubik800.className} cursor-pointer`}
+          >
+            in
+          </div>
         </div>
         <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

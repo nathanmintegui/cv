@@ -20,9 +20,14 @@ export const Footer = () => {
         2023 - Lorem ipsum
       </p>
       <div className="flex">
-        <Image src={GitHub} alt="GitHub Logo" onClick={handleGitHubClick} />
+        <Image
+          src={GitHub}
+          alt="GitHub Logo"
+          onClick={handleGitHubClick}
+          className="cursor-pointer"
+        />
         <p
-          className={`${rubik800.className} pl-10`}
+          className={`${rubik800.className} cursor-pointer pl-10`}
           onClick={handleLinkedinClick}
         >
           in
