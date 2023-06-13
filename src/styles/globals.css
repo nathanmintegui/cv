@@ -26,6 +26,10 @@ body {
   outline: none;
 }
 
-.thin-line {
+.thin-line-top {
   border-top: 1px solid black;
+}
+
+.thin-line-bottom {
+  border-bottom: 1px solid black;
 }
