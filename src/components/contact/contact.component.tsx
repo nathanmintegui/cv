@@ -3,11 +3,7 @@ import { useForm } from "react-hook-form";
 import { rubik800, spaceMono400 } from "~/styles/fonts";
 
 export const Contact: React.FC = () => {
-  const { register, handleSubmit } = useForm();
-
-  const onSubmit = (d: any) => {
-    console.log(d);
-  };
+  const { register } = useForm();
 
   return (
     <div className="flex w-5/12 flex-col items-center">
@@ -16,7 +12,7 @@ export const Contact: React.FC = () => {
       >
         Contact
       </h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex w-9/12 flex-col">
+      <form className="flex w-9/12 flex-col">
         <label className={`${spaceMono400.className} flex flex-col`}>
           Email
           <input
