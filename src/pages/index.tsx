@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 
 import Image from "next/image";
 
-import { rubik700, spaceMono400 } from "~/styles/fonts";
+import { rubik700, rubik800, spaceMono400 } from "~/styles/fonts";
 
 import gitHubIcon from "../assets/github-icon.png";
 
@@ -42,11 +42,13 @@ const Home: NextPage = () => {
 
   const Footer = () => {
     return (
-      <div>
-        <p>2024 - Lorem ipsum</p>
-        <div>
-          <Image src="" alt="" />
-          <p>in</p>
+      <div className="thin-line my-5 flex justify-between pt-2">
+        <p className={`${spaceMono400.className} text-gray-500`}>
+          2023 - Lorem ipsum
+        </p>
+        <div className="flex">
+          <Image src={gitHubIcon} alt="GitHub Logo" />
+          <p className={`${rubik800.className} pl-10`}>in</p>
         </div>
       </div>
     );
