@@ -5,8 +5,13 @@ import { GitHub, IonLogo } from "~/assets";
 import { rubik700, spaceMono400 } from "~/styles/fonts";
 
 export const Header = () => {
-  const handleClick = () => {
+  const handleGitHubClick = () => {
     window.location.href = "https://github.com/nathanmintegui";
+  };
+
+  const handleLinkedinClick = () => {
+    window.location.href =
+      "https://www.linkedin.com/in/nathan-mintegui-berger-171569278/";
   };
 
   return (
@@ -21,9 +26,9 @@ export const Header = () => {
             src={GitHub}
             alt="GitHub logo"
             className="mr-10"
-            onClick={handleClick}
+            onClick={handleGitHubClick}
           />
-          <div>in</div>
+          <div onClick={handleLinkedinClick}>in</div>
         </div>
         <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
