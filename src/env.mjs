@@ -16,7 +16,9 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string().min(1),
+    NEXT_PUBLIC_PUBLIC_KEY: z.string().min(1),
+    NEXT_PUBLIC_SERVICE_ID: z.string().min(1),
+    NEXT_PUBLIC_TEMPLATE_ID: z.string().min(1),
   },
 
   /**
