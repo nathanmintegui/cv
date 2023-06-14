@@ -16,29 +16,26 @@ type FormValues = {
 export const Contact: React.FC = () => {
   const { register, handleSubmit } = useForm<FormValues>();
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  emailjs.init(env.NEXT_PUBLIC_PUBLIC_KEY);
+
+  const onSubmit: SubmitHandler<FormValues> = async (
+    data: FormValues
+  ): Promise<void> => {
     const templateParams = {
       user_email: data.email,
       name: data.name,
       message: data.message,
     };
 
-    emailjs.init(env.NEXT_PUBLIC_PUBLIC_KEY);
-
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         env.NEXT_PUBLIC_SERVICE_ID,
         env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams
-      )
-      .then(
-        function (response) {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
       );
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
@@ -48,7 +45,9 @@ export const Contact: React.FC = () => {
       >
         Contact
       </h1>
+      {/* eslint-disable */}
       <form className="flex w-9/12 flex-col" onSubmit={handleSubmit(onSubmit)}>
+        {/* eslint-enable */}
         <label className={`${spaceMono400.className} flex flex-col`}>
           Email
           <input
