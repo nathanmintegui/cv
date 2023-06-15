@@ -82,7 +82,7 @@ export const Contact: React.FC = () => {
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
           Message
-          <input
+          <textarea
             {...register("message")}
             className="h-48 rounded-sm border border-black"
           />
