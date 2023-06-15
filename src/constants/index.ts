@@ -25,7 +25,7 @@ export const experienceData = [
     date: "jan 2023 - jun 2023",
     name: "CWI Software - Intern",
     description:
-      "Developed Web Applicatons and REST Apis with Docker and Azure deployment using frameworks like React, Java and Docker",
+      "Developed Web Applicatons and REST Apis with Docker and Azure deployment using frameworks like React, Java Spring Boot and Dotnet",
   },
 ];
 
