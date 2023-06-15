@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import React, { useState } from "react";
 
 type FormValues = {
   email: string;
@@ -18,6 +19,7 @@ type FormValues = {
 
 export const Contact: React.FC = () => {
   const { register, handleSubmit } = useForm<FormValues>();
+  const [loading, setLoading] = useState(false);
 
   const showToastSuceessMessage = () => {
     toast.success("Email enviado com sucesso!", {
@@ -38,6 +40,8 @@ export const Contact: React.FC = () => {
   const onSubmit: SubmitHandler<FormValues> = async (
     data: FormValues
   ): Promise<void> => {
+    setLoading(true);
+
     const templateParams = {
       user_email: data.email,
       name: data.name,
@@ -50,10 +54,28 @@ export const Contact: React.FC = () => {
         env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams
       );
+
+      setLoading(false);
+
       showToastSuceessMessage();
     } catch (e) {
+      setLoading(false);
+
       showToastErrorMessage();
     }
+  };
+
+  const Loader: React.FC = () => {
+    return (
+      <div className="mt-5 flex justify-center bg-black">
+        <div className="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -64,7 +86,10 @@ export const Contact: React.FC = () => {
         Contact
       </h1>
       {/* eslint-disable */}
-      <form className="flex w-9/12 flex-col" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        className="mt-5 flex w-9/12 flex-col"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         {/* eslint-enable */}
         <label className={`${spaceMono400.className} flex flex-col`}>
           Email
@@ -87,11 +112,15 @@ export const Contact: React.FC = () => {
             className="h-48 rounded-sm border border-black"
           />
         </label>
-        <button
-          className={`${spaceMono400.className} mt-5 flex h-9 w-20 items-center justify-center rounded-sm bg-black text-white`}
-        >
-          Send
-        </button>
+        {loading ? (
+          <Loader />
+        ) : (
+          <button
+            className={`${spaceMono400.className} mt-5 flex h-9 items-center justify-center rounded-sm bg-black text-white`}
+          >
+            send
+          </button>
+        )}
       </form>
     </div>
   );
