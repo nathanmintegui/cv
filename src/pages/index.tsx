@@ -1,5 +1,7 @@
 import { type NextPage } from "next";
 
+import { ToastContainer } from "react-toastify";
+
 import {
   Contact,
   Container,
@@ -22,6 +24,7 @@ const Home: NextPage = () => {
 
         <section className="mt-24">{<Skills />}</section>
 
+        <ToastContainer />
         <section className="mt-24 flex justify-center">{<Contact />}</section>
 
         {<Footer />}

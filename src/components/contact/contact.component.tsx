@@ -7,6 +7,10 @@ import { rubik800, spaceMono400 } from "~/styles/fonts";
 
 import emailjs from "@emailjs/browser";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import React from "react";
+
 type FormValues = {
   email: string;
   name: string;
@@ -15,6 +19,20 @@ type FormValues = {
 
 export const Contact: React.FC = () => {
   const { register, handleSubmit } = useForm<FormValues>();
+
+  const showToastSuceessMessage = () => {
+    toast.success("Email enviado com sucesso!", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 1000,
+    });
+  };
+
+  const showToastErrorMessage = () => {
+    toast.error("Ocorreu um erro!", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 1000,
+    });
+  };
 
   emailjs.init(env.NEXT_PUBLIC_PUBLIC_KEY);
 
@@ -33,8 +51,9 @@ export const Contact: React.FC = () => {
         env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams
       );
+      showToastSuceessMessage();
     } catch (e) {
-      console.log(e);
+      showToastErrorMessage();
     }
   };
 
@@ -69,7 +88,6 @@ export const Contact: React.FC = () => {
             className="h-48 rounded-sm border border-black"
           />
         </label>
-        <input type="submit" />
         <button
           className={`${spaceMono400.className} mt-5 flex h-9 w-20 items-center justify-center rounded-sm bg-black text-white`}
         >
