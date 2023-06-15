@@ -24,10 +24,10 @@ export const Footer = () => {
           src={GitHub}
           alt="GitHub Logo"
           onClick={handleGitHubClick}
-          className="cursor-pointer"
+          className="cursor-pointer duration-300 ease-in hover:scale-125"
         />
         <p
-          className={`${rubik800.className} cursor-pointer pl-10`}
+          className={`${rubik800.className} cursor-pointer pl-10 duration-300 ease-in hover:scale-125`}
           onClick={handleLinkedinClick}
         >
           in

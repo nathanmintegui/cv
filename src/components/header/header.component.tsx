@@ -25,12 +25,12 @@ export const Header = () => {
           <Image
             src={GitHub}
             alt="GitHub logo"
-            className="mr-10 cursor-pointer"
+            className="mr-10 cursor-pointer duration-300 ease-in hover:scale-125"
             onClick={handleGitHubClick}
           />
           <div
             onClick={handleLinkedinClick}
-            className={`${rubik800.className} cursor-pointer`}
+            className={`${rubik800.className} cursor-pointer duration-300 ease-in hover:scale-125`}
           >
             in
           </div>
