@@ -15,7 +15,7 @@ interface IData {
 export const Experience: React.FC = () => {
   const Experiences: React.FC<IData> = ({ data }: IData) => {
     return (
-      <div className="mt-5 flex flex-col gap-4">
+      <div className="mt-5 flex max-w-sm flex-col gap-4">
         <p className={`${spaceMono700.className} text-base`}>{data.date}</p>
         <p className={`${spaceMono400.className} text-base`}>{data.name}</p>
         <p className={`${spaceMono400.className} text-gray-400`}>
