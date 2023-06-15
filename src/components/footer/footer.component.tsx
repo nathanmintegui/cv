@@ -17,7 +17,7 @@ export const Footer = () => {
   return (
     <div className="thin-line-top my-5 flex justify-between pt-2">
       <p className={`${spaceMono400.className} text-gray-500`}>
-        2023 - Lorem ipsum
+        2023 - Nathan Berger
       </p>
       <div className="flex">
         <Image

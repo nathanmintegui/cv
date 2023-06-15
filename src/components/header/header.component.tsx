@@ -36,8 +36,7 @@ export const Header = () => {
           </div>
         </div>
         <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor amet.
+          Junior FullStack Developer
         </p>
       </div>
     </>
