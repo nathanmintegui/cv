@@ -95,21 +95,21 @@ export const Contact: React.FC = () => {
           Email
           <input
             {...register("email")}
-            className="rounded-sm border border-black"
+            className="rounded-sm border border-black bg-gray-100"
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
           Name
           <input
             {...register("name")}
-            className="rounded-sm border border-black"
+            className="rounded-sm border border-black bg-gray-100"
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
           Message
           <textarea
             {...register("message")}
-            className="h-48 rounded-sm border border-black"
+            className="h-48 rounded-sm border border-black bg-gray-100"
           />
         </label>
         {loading ? (
