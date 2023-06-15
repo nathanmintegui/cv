@@ -9,7 +9,6 @@ import emailjs from "@emailjs/browser";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React from "react";
 
 type FormValues = {
   email: string;
