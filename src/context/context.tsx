@@ -2,7 +2,11 @@ import { createContext, useState } from "react";
 
 export const LanguageContext = createContext("");
 
-const Context = ({ children }) => {
+interface IProps {
+  children: React.ReactNode;
+}
+
+const Context: React.FC<IProps> = ({ children }: IProps) => {
   const [language, setLanguage] = useState("English");
 
   return (
