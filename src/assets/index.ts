@@ -10,6 +10,7 @@ import React from "./react-icon.png";
 import Spring from "./spring-icon.png";
 import Javascript from "./js-icon.png";
 import IonLogo from "./ion-logo.png";
+import CircularArrow from "./circular-arrow.png";
 
 export {
   CSharp,
@@ -24,4 +25,5 @@ export {
   Spring,
   Javascript,
   IonLogo,
+  CircularArrow,
 };
