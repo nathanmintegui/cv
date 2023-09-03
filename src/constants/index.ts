@@ -11,23 +11,43 @@ import {
   Spring,
 } from "~/assets";
 
-export const educationData = [
-  {
-    date: "2022 - 2023",
-    name: "Internet Computing",
-    description:
-      "Studying topics as mobal development. web develpoment, analysis and quality control.",
-  },
-];
+export const educationData = {
+  English: [
+    {
+      date: "2022 - 2023",
+      name: "Internet Computing",
+      description:
+        "Studying topics as mobal development. web develpoment, analysis and quality control.",
+    },
+  ],
+  Portugues: [
+    {
+      date: "2022 - 2023",
+      name: "Informática",
+      description:
+        "Estudando tópicos como desenvolvimento móvel, desenvolvimento web, análise e controle de qualidade.",
+    },
+  ],
+};
 
-export const experienceData = [
-  {
-    date: "jan 2023 - jun 2023",
-    name: "CWI Software - Intern",
-    description:
-      "Developed Web Applicatons and REST Apis with Docker and Azure deployment using frameworks like React, Java Spring Boot and Dotnet",
-  },
-];
+export const experienceData = {
+  English: [
+    {
+      date: "jan 2023 - jun 2023",
+      name: "CWI Software - Intern",
+      description:
+        "Developed Web Applicatons and REST Apis with Docker and Azure deployment using frameworks like React, Java Spring Boot and Dotnet",
+    },
+  ],
+  Portugues: [
+    {
+      date: "jan 2023 - jun 2023",
+      name: "CWI Software - Estágio",
+      description:
+        "Desenvolvi Aplicações Web e APIs REST com implantação no Docker e Azure, utilizando frameworks como React, Java Spring Boot e Dotnet.",
+    },
+  ],
+};
 
 export const skillData = [
   {
