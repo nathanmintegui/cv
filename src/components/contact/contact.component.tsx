@@ -9,7 +9,8 @@ import emailjs from "@emailjs/browser";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LanguageContext } from "~/context/context";
 
 type FormValues = {
   email: string;
@@ -20,6 +21,7 @@ type FormValues = {
 export const Contact: React.FC = () => {
   const { register, handleSubmit } = useForm<FormValues>();
   const [loading, setLoading] = useState(false);
+  const { language } = useContext(LanguageContext);
 
   const showToastSuceessMessage = () => {
     toast.success("Email enviado com sucesso!", {
@@ -83,7 +85,7 @@ export const Contact: React.FC = () => {
       <h1
         className={`${rubik800.className} section-shadow flex h-28 w-80 items-center justify-center rounded-3xl text-4xl`}
       >
-        Contact
+        {language === "English" ? "Contact" : "Contato"}
       </h1>
       {/* eslint-disable */}
       <form
@@ -99,14 +101,14 @@ export const Contact: React.FC = () => {
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
-          Name
+          {language === "English" ? "Name" : "Nome"}
           <input
             {...register("name")}
             className="rounded-sm border border-black bg-gray-100"
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
-          Message
+          {language === "English" ? "Messsage" : "Mensagem"}
           <textarea
             {...register("message")}
             className="h-48 rounded-sm border border-black bg-gray-100"
@@ -118,7 +120,7 @@ export const Contact: React.FC = () => {
           <button
             className={`${spaceMono400.className} mt-5 flex h-9 items-center justify-center rounded-sm bg-black text-white`}
           >
-            send
+            {language === "English" ? "send" : "enviar"}
           </button>
         )}
       </form>
