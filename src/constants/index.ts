@@ -2,7 +2,7 @@ import {
   CSharp,
   Css,
   Docker,
-  GitHub,
+  Git,
   Html,
   Java,
   Javascript,
@@ -79,7 +79,7 @@ export const skillData = [
     name: "C#",
   },
   {
-    icon: GitHub,
+    icon: Git,
     name: "Git/Github",
   },
   {
