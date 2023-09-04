@@ -1,8 +1,12 @@
+import { useContext } from "react";
+
 import { rubik700, spaceMono400, spaceMono700 } from "~/styles/fonts";
 
-import { experienceData } from "~/constants";
-import { useContext } from "react";
 import { LanguageContext } from "~/context/context";
+
+import { experienceData } from "~/constants";
+
+import type { ItemType } from "~/constants";
 
 interface IProps {
   date: string;
@@ -34,7 +38,7 @@ export const Experience: React.FC = () => {
       <h1 className={`${rubik700.className} text-4xl`}>
         {language === "English" ? "EXPERIENCE" : "EXPERIÊNCIA"}
       </h1>
-      {experienceData[language].map((item, index) => (
+      {experienceData[language]?.map((item: ItemType, index: number) => (
         <Experiences key={index} data={item} />
       ))}
     </div>

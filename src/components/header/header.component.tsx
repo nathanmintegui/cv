@@ -1,15 +1,19 @@
 import { type ReactElement, useContext } from "react";
 
+import { rubik700, rubik800, spaceMono400 } from "~/styles/fonts";
+
 import Image from "next/image";
 
 import { GitHub, IonLogo, CircularArrow } from "~/assets";
 
-import { LanguageContext } from "~/context/context";
+import { LanguageContext, LANGUAGES } from "~/context/context";
 
-import { rubik700, rubik800, spaceMono400 } from "~/styles/fonts";
+import type { IlanguageContext } from "~/context/context";
 
 export const Header = () => {
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(
+    LanguageContext
+  ) as IlanguageContext;
 
   const handleGitHubClick = () => {
     window.location.href = "https://github.com/nathanmintegui";
@@ -20,7 +24,7 @@ export const Header = () => {
       "https://www.linkedin.com/in/nathan-mintegui-berger-171569278/";
   };
 
-  const languageHandler = (language: string) => {
+  const languageHandler = (language: LANGUAGES) => {
     return (
       <div
         className={`${spaceMono400.className} absolute right-0 flex items-center gap-1 pr-20`}
@@ -33,13 +37,19 @@ export const Header = () => {
           height={20}
           onClick={handleLanguageExchangeHandler}
         />
-        <p>{language === "English" ? "Português" : "English"}</p>
+        <p>
+          {language === LANGUAGES.ENGLISH
+            ? LANGUAGES.PORTUGUES
+            : LANGUAGES.ENGLISH}
+        </p>
       </div>
     );
   };
 
   const handleLanguageExchangeHandler = (): void => {
-    setLanguage(language === "English" ? "Portugues" : "English");
+    setLanguage(
+      language === LANGUAGES.ENGLISH ? LANGUAGES.PORTUGUES : LANGUAGES.ENGLISH
+    );
   };
 
   const ROLE_NAME = {
@@ -47,7 +57,7 @@ export const Header = () => {
     Portugues: "Desenvolvedor FullStack Júnior",
   };
 
-  const renderRoleName = (language: string): ReactElement => {
+  const renderRoleName = (language: LANGUAGES): ReactElement => {
     return (
       <p className={`${spaceMono400.className} w-4/6 text-center text-base`}>
         {ROLE_NAME[language]}

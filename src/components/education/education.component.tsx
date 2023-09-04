@@ -1,8 +1,12 @@
+import { useContext } from "react";
+
 import { rubik700, spaceMono400, spaceMono700 } from "~/styles/fonts";
 
 import { educationData } from "../../constants/index";
-import { useContext } from "react";
-import { LanguageContext } from "~/context/context";
+
+import type { ItemType } from "../../constants/index";
+
+import { LANGUAGES, LanguageContext } from "~/context/context";
 
 interface IProps {
   date: string;
@@ -32,9 +36,9 @@ export const Education = () => {
   return (
     <div className="section-shadow items-start gap-2.5 px-16 py-8">
       <h1 className={`${rubik700.className} text-4xl`}>
-        {language === "English" ? "EDUCATION" : "FORMAÇÃO"}
+        {language === LANGUAGES.ENGLISH ? "EDUCATION" : "FORMAÇÃO"}
       </h1>
-      {educationData[language].map((item, index) => (
+      {educationData[language]?.map((item: ItemType, index: number) => (
         <Course key={index} data={item} />
       ))}
     </div>

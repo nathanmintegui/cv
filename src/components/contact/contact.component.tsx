@@ -1,16 +1,18 @@
+import React, { useContext, useState } from "react";
+
+import { rubik800, spaceMono400 } from "~/styles/fonts";
+
 import { env } from "~/env.mjs";
 
 import { useForm } from "react-hook-form";
 import type { SubmitHandler } from "react-hook-form";
 
-import { rubik800, spaceMono400 } from "~/styles/fonts";
-
 import emailjs from "@emailjs/browser";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import React, { useContext, useState } from "react";
-import { LanguageContext } from "~/context/context";
+
+import { LANGUAGES, LanguageContext } from "~/context/languageContext";
 
 type FormValues = {
   email: string;
@@ -85,7 +87,7 @@ export const Contact: React.FC = () => {
       <h1
         className={`${rubik800.className} section-shadow flex h-28 w-80 items-center justify-center rounded-3xl text-4xl`}
       >
-        {language === "English" ? "Contact" : "Contato"}
+        {language === LANGUAGES.ENGLISH ? "Contact" : "Contato"}
       </h1>
       {/* eslint-disable */}
       <form
@@ -101,14 +103,14 @@ export const Contact: React.FC = () => {
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
-          {language === "English" ? "Name" : "Nome"}
+          {language === LANGUAGES.ENGLISH ? "Name" : "Nome"}
           <input
             {...register("name")}
             className="rounded-sm border border-black bg-gray-100"
           />
         </label>
         <label className={`${spaceMono400.className} flex flex-col`}>
-          {language === "English" ? "Messsage" : "Mensagem"}
+          {language === LANGUAGES.ENGLISH ? "Messsage" : "Mensagem"}
           <textarea
             {...register("message")}
             className="h-48 rounded-sm border border-black bg-gray-100"
@@ -120,7 +122,7 @@ export const Contact: React.FC = () => {
           <button
             className={`${spaceMono400.className} mt-5 flex h-9 items-center justify-center rounded-sm bg-black text-white`}
           >
-            {language === "English" ? "send" : "enviar"}
+            {language === LANGUAGES.ENGLISH ? "send" : "enviar"}
           </button>
         )}
       </form>
