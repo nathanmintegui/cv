@@ -22,6 +22,6 @@ If you'd like to contribute to this project, follow these steps:
 
 The website will run locally at `http://localhost:3000` 🌐.
 
-Feel free to add more emojis and decorations to enhance the user experience! 🎨✨
+Fork this repository and create a Pull Request with your changes.
 
 Thank you for considering contributing to this project. Your contributions are greatly appreciated! 🙌👏
