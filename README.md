@@ -1,5 +1,7 @@
 # Personal CV Portfolio Website 💼
 
+![demo](https://github.com/nathanmintegui/cv/assets/79856434/ff5a616c-37cd-4f96-8061-a8116aa0ca33)
+
 ## About ℹ️
 
 This Next.js application serves as my personal portfolio, showcasing my skills, past work experiences, and education. The website is currently hosted on Vercel 🌐.
