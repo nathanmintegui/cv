@@ -1,6 +1,6 @@
 # Personal CV Portfolio Website 💼
 
-![demo](https://github.com/nathanmintegui/cv/assets/79856434/ff5a616c-37cd-4f96-8061-a8116aa0ca33)
+![demo](https://github.com/nathanmintegui/cv/assets/79856434/a6adbaa5-159b-4e9b-853a-1445fc6b8506)
 
 ## About ℹ️
 
