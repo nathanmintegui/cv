@@ -1,13 +1,13 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 
-export const LanguageContext = createContext("");
+import { LANGUAGES, LanguageContext } from "./languageContext";
 
-interface IProps {
+interface IContextProps {
   children: React.ReactNode;
 }
 
-const Context: React.FC<IProps> = ({ children }: IProps) => {
-  const [language, setLanguage] = useState("English");
+const Context: React.FC<IContextProps> = ({ children }: IContextProps) => {
+  const [language, setLanguage] = useState<LANGUAGES>(LANGUAGES.ENGLISH);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
