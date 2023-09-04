@@ -21,7 +21,7 @@ interface IData {
 
 const Skill: React.FC<IData> = ({ data }: IData) => {
   return (
-    <div className="flex flex-col gap-4 p-16">
+    <div className="flex flex-col items-center gap-4  p-16">
       <Image src={data.icon} alt="" className="" />
       <h1 className={`${spaceMono700.className} text-center text-base`}>
         {data.name}
