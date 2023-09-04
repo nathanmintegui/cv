@@ -2,7 +2,7 @@ import { useContext } from "react";
 
 import { rubik700, spaceMono400, spaceMono700 } from "~/styles/fonts";
 
-import { LanguageContext } from "~/context/context";
+import { LanguageContext } from "~/context/languageContext";
 
 import { experienceData } from "~/constants";
 
