@@ -6,9 +6,9 @@ import Image from "next/image";
 
 import { GitHub, IonLogo, CircularArrow } from "~/assets";
 
-import { LanguageContext, LANGUAGES } from "~/context/context";
+import { LANGUAGES, LanguageContext } from "~/context/languageContext";
 
-import type { IlanguageContext } from "~/context/context";
+import type { IlanguageContext } from "~/context/languageContext";
 
 export const Header = () => {
   const { language, setLanguage } = useContext(

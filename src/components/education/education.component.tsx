@@ -6,7 +6,7 @@ import { educationData } from "../../constants/index";
 
 import type { ItemType } from "../../constants/index";
 
-import { LANGUAGES, LanguageContext } from "~/context/context";
+import { LANGUAGES, LanguageContext } from "~/context/languageContext";
 
 interface IProps {
   date: string;

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { LANGUAGES, LanguageContext } from "~/context/context";
+import { LANGUAGES, LanguageContext } from "~/context/languageContext";
 
 import { rubik700, spaceMono700 } from "~/styles/fonts";
 
