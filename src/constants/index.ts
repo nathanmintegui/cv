@@ -11,7 +11,15 @@ import {
   Spring,
 } from "~/assets";
 
-export const educationData = {
+export type ItemType = {
+  date: string;
+  name: string;
+  description: string;
+};
+
+type CardsDataType = Record<string, ItemType[]>;
+
+export const educationData: CardsDataType = {
   English: [
     {
       date: "2022 - 2023",
@@ -30,7 +38,7 @@ export const educationData = {
   ],
 };
 
-export const experienceData = {
+export const experienceData: CardsDataType = {
   English: [
     {
       date: "jan 2023 - jun 2023",
